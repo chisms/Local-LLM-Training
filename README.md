@@ -15,7 +15,7 @@ This project allows you to fine-tune a GPT-2 language model on the content of Yo
 
 2. Create a virtual environment:
 python3 -m venv youtube_llm_env
-Copy
+
 3. Activate the virtual environment:
 - On Unix or MacOS:
   ```
@@ -30,12 +30,12 @@ Copy
 ```
 pip install yt-dlp ffmpeg-python openai-whisper nltk scikit-learn transformers torch datasets flask werkzeug PyPDF2
 ```
-Copy
+
 6. Download the NLTK punkt tokenizer:
 ```
 python -c "import nltk; nltk.download('punkt')"
 ```
-Copy
+
 7. If you have a CUDA-capable GPU, ensure you have the appropriate CUDA toolkit and cuDNN installed. The PyTorch installation should automatically detect and use your GPU.
 
 ## Running the Web Application
