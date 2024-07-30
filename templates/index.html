@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Training</title>
+</head>
+<body>
+    <h1>LLM Training</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="POST" enctype="multipart/form-data">
+        <label for="file_type">Select file type:</label>
+        <select name="file_type" id="file_type">
+            <option value="youtube">YouTube URL</option>
+            <option value="pdf">PDF</option>
+            <option value="json">JSON</option>
+        </select>
+        <br><br>
+        <div id="youtube_input">
+            <label for="youtube_url">YouTube URL:</label>
+            <input type="text" name="youtube_url" id="youtube_url">
+        </div>
+        <div id="file_input" style="display: none;">
+            <label for="file">Upload file:</label>
+            <input type="file" name="file" id="file">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('file_type').addEventListener('change', function() {
+            var youtubeInput = document.getElementById('youtube_input');
+            var fileInput = document.getElementById('file_input');
+            if (this.value === 'youtube') {
+                youtubeInput.style.display = 'block';
+                fileInput.style.display = 'none';
+            } else {
+                youtubeInput.style.display = 'none';
+                fileInput.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
