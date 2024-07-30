@@ -41,11 +41,13 @@ python -c "import nltk; nltk.download('punkt')"
 ## Running the Web Application
 
 1. Start the Flask application:
+```
 python app.py
-Copy
-2. Open a web browser and navigate to `http://localhost:5000`.
+```
 
-3. Use the web interface to upload YouTube URLs, PDF files, or JSON files for processing and training.
+3. Open a web browser and navigate to `http://localhost:5000`.
+
+4. Use the web interface to upload YouTube URLs, PDF files, or JSON files for processing and training.
 
 ## Preparing the Dataset
 
